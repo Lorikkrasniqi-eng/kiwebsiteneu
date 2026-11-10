@@ -1,110 +1,447 @@
 
+
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grand Canyon – Discover America</title>
+
+<title>Grand Canyon – Amerika entdecken</title>
+
+<link rel="stylesheet" href="style.css">
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f2f4f8;color:#222}
-header{background:#142d50;color:white;padding:25px;text-align:center}
-nav a{color:white;margin:10px;text-decoration:none}
-.hero{height:350px;background:linear-gradient(#0005,#0006),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400') center/cover;display:flex;align-items:center;justify-content:center;color:white;text-align:center}
-.hero h2{font-size:48px;text-shadow:2px 2px 5px black}
-main{max-width:1000px;margin:30px auto;padding:20px}
-section{background:white;padding:25px;margin:20px 0;border-radius:12px;box-shadow:0 3px 12px #0001}
-h2{color:#bd2026}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
-.fact{background:#edf2f8;padding:18px;border-radius:10px}
-.back{display:inline-block;background:#bd2026;color:white;padding:13px 20px;text-decoration:none;border-radius:8px}
-footer{text-align:center;background:#142d50;color:white;padding:20px}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8ef;
+    color: #252525;
+}
+
+header {
+    background: #bd2026;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 450px;
+    background:
+    linear-gradient(#0005, #0008),
+    url("https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?w=1600")
+    center/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.content h2 {
+    color: #bd2026;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.intro {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.places {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #0002;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #bd2026;
+    padding: 0 15px;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    line-height: 1.6;
+}
+
+.facts {
+    background: #142d50;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    line-height: 2;
+}
+
+.facts h2 {
+    color: white;
+}
+
+.back {
+    display: block;
+    width: fit-content;
+    margin: 35px auto;
+    padding: 15px 25px;
+    background: #bd2026;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background: #8e171c;
+}
+
+footer {
+    background: #142d50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+@media(max-width:600px) {
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+}
+
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>🇺🇸 DISCOVER AMERICA</h1>
-<nav><a href="index.html">Startseite</a><a href="page2.html">Entdecken</a></nav>
+
+    <h1>🇺🇸 DISCOVER AMERICA</h1>
+
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="page2.html">Entdecken</a>
+        <a href="fakten.html">USA Fakten</a>
+    </nav>
+
 </header>
 
-<div class="hero"><h2>🏜️ Grand Canyon</h2></div>
+<section class="hero">
 
-<main>
-<section>
-<h2>Willkommen am Grand Canyon!</h2>
-<p>Der Grand Canyon ist eine riesige Schlucht im Bundesstaat Arizona im Südwesten der USA. Er gehört zu den beeindruckendsten Naturlandschaften der Welt.</p>
-<p>Seine riesigen Felswände, tiefen Täler und unterschiedlichen Farben ziehen jedes Jahr viele Besucher an.</p>
+    <div>
+
+        <h2>🏜️ GRAND CANYON</h2>
+
+        <p>
+            Ein Naturwunder voller Farben, riesiger Felsen
+            und atemberaubender Landschaften!
+        </p>
+
+    </div>
+
 </section>
 
-<section>
-<h2>📊 Grand Canyon in Zahlen</h2>
-<div class="facts">
-<div class="fact"><b>Bundesstaat</b><br>Arizona</div>
-<div class="fact"><b>Land</b><br>USA</div>
-<div class="fact"><b>Länge</b><br>Etwa 446 km</div>
-<div class="fact"><b>Tiefe</b><br>Bis etwa 1.800 m</div>
-<div class="fact"><b>Fluss</b><br>Colorado River</div>
-<div class="fact"><b>Nationalpark</b><br>Seit 1919</div>
+<div class="content">
+
+    <h2>🏜️ Willkommen am Grand Canyon</h2>
+
+    <p class="intro">
+        Der Grand Canyon befindet sich im Bundesstaat Arizona
+        im Südwesten der Vereinigten Staaten.
+
+        Er gehört zu den beeindruckendsten Naturlandschaften
+        der Welt. Über Millionen von Jahren haben der Colorado
+        River und natürliche Erosionsprozesse diese riesige
+        Schlucht geformt.
+
+        Der Grand Canyon ist ungefähr 446 Kilometer lang
+        und an manchen Stellen bis zu 29 Kilometer breit.
+    </p>
+
+    <h2>⭐ Die berühmtesten Orte am Grand Canyon</h2>
+
+    <div class="places">
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?w=800"
+            alt="Grand Canyon">
+
+            <h3>🏜️ South Rim</h3>
+
+            <p>
+                Der South Rim ist der bekannteste und
+                meistbesuchte Bereich des Grand Canyon.
+                Hier gibt es zahlreiche Aussichtspunkte
+                und Wanderwege.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800"
+            alt="Grand Canyon Aussicht">
+
+            <h3>🌅 Mather Point</h3>
+
+            <p>
+                Mather Point ist ein berühmter Aussichtspunkt
+                am South Rim. Besonders bei Sonnenaufgang
+                und Sonnenuntergang ist die Aussicht beeindruckend.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800"
+            alt="Berge und Felsen">
+
+            <h3>⛰️ North Rim</h3>
+
+            <p>
+                Der North Rim liegt höher als der South Rim
+                und ist deutlich ruhiger. Er bietet eine
+                wunderschöne Aussicht auf die Schlucht.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800"
+            alt="Grand Canyon Landschaft">
+
+            <h3>🌄 Desert View</h3>
+
+            <p>
+                Desert View bietet einen weiten Blick
+                über den Grand Canyon und den Colorado River.
+                Dort befindet sich auch ein historischer Aussichtsturm.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800"
+            alt="Wüstenlandschaft">
+
+            <h3>🌵 Colorado River</h3>
+
+            <p>
+                Der Colorado River fliesst durch den Grand Canyon.
+                Über Millionen von Jahren hat er die Landschaft
+                entscheidend mitgeformt.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800"
+            alt="Wanderlandschaft">
+
+            <h3>🥾 Bright Angel Trail</h3>
+
+            <p>
+                Dieser bekannte Wanderweg führt vom South Rim
+                hinunter in den Grand Canyon. Er bietet
+                beeindruckende Einblicke in die Schlucht.
+            </p>
+
+        </div>
+
+    </div>
+
+    <h2>🌎 Wie ist der Grand Canyon entstanden?</h2>
+
+    <p class="intro">
+        Der Grand Canyon entstand über einen Zeitraum von
+        Millionen von Jahren.
+
+        Der Colorado River schnitt sich langsam durch die
+        Gesteinsschichten. Wind, Regen, Frost und andere
+        natürliche Kräfte formten die Felsen zusätzlich.
+
+        Dadurch entstand eine riesige Schlucht mit
+        unterschiedlichen Farben und Gesteinsschichten.
+    </p>
+
+    <h2>🦎 Tiere und Pflanzen</h2>
+
+    <p class="intro">
+        Im Grand Canyon leben viele verschiedene Tierarten.
+        Dazu gehören Kondore, Adler, Hirsche, Eichhörnchen,
+        Eidechsen und verschiedene Schlangen.
+
+        Auch die Pflanzenwelt ist vielfältig.
+        Je nach Höhe und Klima wachsen dort Kakteen,
+        Sträucher, Gräser und Nadelbäume.
+    </p>
+
+    <div class="places">
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=800"
+            alt="Vogel">
+
+            <h3>🦅 Kalifornischer Kondor</h3>
+
+            <p>
+                Der Kalifornische Kondor gehört zu den grössten
+                flugfähigen Vögeln Nordamerikas.
+                Er ist eine besonders geschützte Tierart.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800"
+            alt="Wüste">
+
+            <h3>🌵 Wüstenpflanzen</h3>
+
+            <p>
+                In den trockenen Gebieten wachsen verschiedene
+                Kakteen und andere Pflanzen, die mit wenig Wasser
+                überleben können.
+            </p>
+
+        </div>
+
+    </div>
+
+    <h2>🥾 Aktivitäten am Grand Canyon</h2>
+
+    <p class="intro">
+        Besucher können den Grand Canyon auf viele Arten
+        entdecken.
+
+        Besonders beliebt sind Wanderungen, Fotografie,
+        Aussichtspunkte und geführte Touren.
+
+        An manchen Stellen sind auch Rafting-Touren auf dem
+        Colorado River möglich.
+    </p>
+
+    <h2>🌡️ Das Klima</h2>
+
+    <p class="intro">
+        Das Wetter am Grand Canyon hängt stark von der Höhe ab.
+
+        Im Sommer kann es am oberen Rand sehr warm werden.
+        Im Inneren der Schlucht können die Temperaturen
+        noch deutlich höher sein.
+
+        Im Winter kann es am South Rim sogar schneien.
+    </p>
+
+    <section class="facts">
+
+        <h2>🤯 Interessante Fakten über den Grand Canyon</h2>
+
+        <ul>
+            <li>Der Grand Canyon liegt im Bundesstaat Arizona.</li>
+            <li>Er ist ungefähr 446 Kilometer lang.</li>
+            <li>An manchen Stellen ist er bis zu 29 Kilometer breit.</li>
+            <li>Der Colorado River fliesst durch die Schlucht.</li>
+            <li>Der Grand Canyon ist mehrere Millionen Jahre alt.</li>
+            <li>1919 wurde der Grand Canyon zum Nationalpark erklärt.</li>
+            <li>1979 wurde er zum UNESCO-Weltnaturerbe erklärt.</li>
+            <li>Der Grand Canyon besitzt viele verschiedene Gesteinsschichten.</li>
+            <li>Jedes Jahr besuchen Millionen Menschen den Nationalpark.</li>
+            <li>Der Grand Canyon gehört zu den bekanntesten Naturwundern der USA.</li>
+        </ul>
+
+    </section>
+
+    <h2>❤️ Warum den Grand Canyon besuchen?</h2>
+
+    <p class="intro">
+        Der Grand Canyon ist ein einzigartiger Ort.
+        Die riesigen Felsen, die beeindruckenden Farben
+        und die wunderschöne Natur machen ihn zu einem
+        unvergesslichen Erlebnis.
+
+        Wer die Natur liebt, sollte diesen Ort unbedingt
+        einmal gesehen haben!
+    </p>
+
+    <a href="page2.html" class="back">
+        ← Zurück zu den berühmten Orten
+    </a>
+
 </div>
-</section>
 
-<section>
-<h2>📖 Wie ist der Grand Canyon entstanden?</h2>
-<p>Der Grand Canyon entstand über Millionen von Jahren. Der Colorado River grub sich langsam durch die Gesteinsschichten und formte die tiefe Schlucht.</p>
-<p>Wind, Regen, Eis und andere natürliche Kräfte veränderten die Felslandschaft zusätzlich.</p>
-<p>Die verschiedenen Gesteinsschichten zeigen einen Teil der langen Erdgeschichte. Manche Gesteine sind sogar fast zwei Milliarden Jahre alt.</p>
-</section>
+<footer>
 
-<section>
-<h2>⭐ Die bekanntesten Aussichtspunkte</h2>
+    <p>© 2026 Amerika entdecken | Grand Canyon 🏜️</p>
 
-<h3>🌄 South Rim</h3>
-<p>Der South Rim ist der bekannteste und am häufigsten besuchte Bereich des Grand Canyon. Von dort gibt es viele Aussichtspunkte und Wanderwege.</p>
+</footer>
 
-<h3>🏜️ North Rim</h3>
-<p>Der North Rim liegt höher und ist deutlich ruhiger. Er ist nicht das ganze Jahr über geöffnet.</p>
-
-<h3>🌉 Skywalk</h3>
-<p>Der Grand Canyon Skywalk ist eine hufeisenförmige Glasplattform am West Rim. Besucher können von dort in die Tiefe schauen.</p>
-
-<h3>🌊 Colorado River</h3>
-<p>Der Colorado River fliesst durch den Grand Canyon. Er hat die Landschaft über sehr lange Zeit geformt.</p>
-</section>
-
-<section>
-<h2>🦅 Tiere und Pflanzen</h2>
-<p>Im Gebiet des Grand Canyon leben viele verschiedene Tiere. Dazu gehören Kondore, Adler, Kojoten, Maultierhirsche und zahlreiche Reptilien.</p>
-<p>Auch die Pflanzenwelt ist vielfältig. Je nach Höhe und Klima findet man Kakteen, Sträucher, Gräser und Bäume.</p>
-</section>
-
-<section>
-<h2>🥾 Was kann man dort machen?</h2>
-<ul>
-<li>Wandern auf verschiedenen Wanderwegen.</li>
-<li>Die Aussicht von den Aussichtspunkten geniessen.</li>
-<li>Fotografieren und die Natur beobachten.</li>
-<li>Geführte Touren unternehmen.</li>
-<li>Den Colorado River bei geeigneten Touren erleben.</li>
-<li>Den Sternenhimmel beobachten.</li>
-</ul>
-</section>
-
-<section>
-<h2>🤯 Wusstest du schon?</h2>
-<ul>
-<li>Der Grand Canyon ist etwa 446 Kilometer lang.</li>
-<li>Er kann an manchen Stellen ungefähr 1.800 Meter tief sein.</li>
-<li>Der Colorado River hat die Schlucht über Millionen von Jahren geformt.</li>
-<li>Der Grand Canyon wurde 1919 zum Nationalpark erklärt.</li>
-<li>1979 wurde er zum UNESCO-Weltnaturerbe erklärt.</li>
-<li>Die Farben der Felsen verändern sich je nach Sonnenlicht.</li>
-</ul>
-</section>
-
-<a class="back" href="page2.html">← Zurück zu Discover America</a>
-</main>
-
-<footer>© 2026 Discover America – Grand Canyon</footer>
 <script src="america-ai.js" defer></script>
+
 </body>
 </html>

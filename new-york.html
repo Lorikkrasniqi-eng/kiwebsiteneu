@@ -1,98 +1,441 @@
 
+
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New York City – Discover America</title>
+
+<title>New York City – Amerika entdecken</title>
+
+<link rel="stylesheet" href="style.css">
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f2f4f8;color:#222}
-header{background:#142d50;color:white;padding:25px;text-align:center}
-nav a{color:white;margin:10px;text-decoration:none}
-.hero{height:350px;background:linear-gradient(#0005,#0006),url('https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1400') center/cover;display:flex;align-items:center;justify-content:center;color:white;text-align:center}
-.hero h2{font-size:48px;text-shadow:2px 2px 5px black}
-main{max-width:1000px;margin:30px auto;padding:20px}
-section{background:white;padding:25px;margin:20px 0;border-radius:12px;box-shadow:0 3px 12px #0001}
-h2{color:#bd2026}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
-.fact{background:#edf2f8;padding:18px;border-radius:10px}
-.back{display:inline-block;background:#bd2026;color:white;padding:13px 20px;text-decoration:none;border-radius:8px}
-footer{text-align:center;background:#142d50;color:white;padding:20px}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6fa;
+    color: #252525;
+}
+
+header {
+    background: #bd2026;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 450px;
+    background:
+    linear-gradient(#0006, #0008),
+    url("https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=1600")
+    center/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.content h2 {
+    color: #bd2026;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.intro {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.places {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #0002;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #bd2026;
+    padding: 0 15px;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    line-height: 1.6;
+}
+
+.facts {
+    background: #142d50;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    line-height: 2;
+}
+
+.facts h2 {
+    color: white;
+}
+
+.back {
+    display: block;
+    width: fit-content;
+    margin: 35px auto;
+    padding: 15px 25px;
+    background: #bd2026;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background: #8e171c;
+}
+
+footer {
+    background: #142d50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+@media(max-width:600px) {
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+}
+
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>🇺🇸 DISCOVER AMERICA</h1>
-<nav><a href="index.html">Startseite</a><a href="page2.html">Entdecken</a></nav>
+
+    <h1>🇺🇸 DISCOVER AMERICA</h1>
+
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="page2.html">Entdecken</a>
+        <a href="fakten.html">USA Fakten</a>
+    </nav>
+
 </header>
 
-<div class="hero"><h2>🗽 New York City</h2></div>
+<section class="hero">
 
-<main>
-<section>
-<h2>Willkommen in New York!</h2>
-<p>New York City ist eine der bekanntesten Städte der Welt. Sie liegt im Bundesstaat New York an der Ostküste der Vereinigten Staaten. Viele Menschen nennen sie auch „The Big Apple“ oder „Die Stadt, die niemals schläft“.</p>
-<p>Die Stadt ist berühmt für ihre riesigen Wolkenkratzer, ihre vielen Kulturen, ihre berühmten Sehenswürdigkeiten und ihr aufregendes Stadtleben.</p>
+    <div>
+
+        <h2>🗽 NEW YORK CITY</h2>
+
+        <p>
+            Die Stadt, die niemals schläft –
+            Wolkenkratzer, Lichter und unendliche Möglichkeiten!
+        </p>
+
+    </div>
+
 </section>
 
-<section>
-<h2>📊 New York in Zahlen</h2>
-<div class="facts">
-<div class="fact"><b>Bundesstaat</b><br>New York</div>
-<div class="fact"><b>Land</b><br>USA</div>
-<div class="fact"><b>Sprache</b><br>Vor allem Englisch</div>
-<div class="fact"><b>Spitzname</b><br>The Big Apple</div>
-<div class="fact"><b>Stadtteile</b><br>5 Boroughs</div>
-<div class="fact"><b>Zeitzone</b><br>Eastern Time</div>
+<div class="content">
+
+    <h2>🗽 Willkommen in New York</h2>
+
+    <p class="intro">
+        New York City liegt im Nordosten der Vereinigten Staaten
+        und gehört zu den bekanntesten Städten der Welt.
+
+        Die Stadt ist berühmt für ihre riesigen Wolkenkratzer,
+        die Freiheitsstatue, den Times Square und ihre
+        vielfältige Kultur.
+
+        New York wird oft als „The Big Apple“ bezeichnet
+        und ist ein wichtiges Zentrum für Wirtschaft,
+        Mode, Kunst und Unterhaltung.
+    </p>
+
+    <h2>⭐ Die berühmtesten Sehenswürdigkeiten</h2>
+
+    <div class="places">
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=800"
+            alt="Freiheitsstatue">
+
+            <h3>🗽 Freiheitsstatue</h3>
+
+            <p>
+                Die Freiheitsstatue befindet sich auf Liberty Island.
+                Sie war ein Geschenk Frankreichs an die USA und
+                ist ein weltbekanntes Symbol für Freiheit.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800"
+            alt="Times Square">
+
+            <h3>🌆 Times Square</h3>
+
+            <p>
+                Der Times Square ist für seine riesigen
+                Werbetafeln, leuchtenden Bildschirme und
+                die vielen Menschen bekannt.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800"
+            alt="Central Park">
+
+            <h3>🌳 Central Park</h3>
+
+            <p>
+                Der Central Park ist eine riesige Grünanlage
+                mitten in Manhattan. Hier kann man spazieren,
+                Fahrrad fahren und entspannen.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800"
+            alt="Empire State Building">
+
+            <h3>🏙️ Empire State Building</h3>
+
+            <p>
+                Das Empire State Building ist einer der
+                bekanntesten Wolkenkratzer der Welt.
+                Von oben hat man eine beeindruckende Aussicht.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800"
+            alt="Brooklyn Bridge">
+
+            <h3>🌉 Brooklyn Bridge</h3>
+
+            <p>
+                Die Brooklyn Bridge verbindet Manhattan
+                mit Brooklyn und gehört zu den bekanntesten
+                Brücken der Vereinigten Staaten.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=800"
+            alt="Manhattan">
+
+            <h3>🌃 Manhattan</h3>
+
+            <p>
+                Manhattan ist der bekannteste Stadtteil
+                New Yorks. Hier befinden sich viele berühmte
+                Gebäude, Geschäfte und Sehenswürdigkeiten.
+            </p>
+
+        </div>
+
+    </div>
+
+    <h2>🏙️ Die fünf Stadtteile von New York</h2>
+
+    <p class="intro">
+        New York City besteht aus fünf Stadtteilen,
+        die auch Boroughs genannt werden.
+    </p>
+
+    <div class="places">
+
+        <div class="card">
+            <h3>🏙️ Manhattan</h3>
+            <p>
+                Das berühmte Zentrum mit Times Square,
+                Central Park und Empire State Building.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌉 Brooklyn</h3>
+            <p>
+                Bekannt für die Brooklyn Bridge,
+                seine Wohnviertel und kreative Kultur.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⚾ Queens</h3>
+            <p>
+                Ein besonders vielfältiger Stadtteil
+                mit Menschen aus vielen Ländern.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🏡 Bronx</h3>
+            <p>
+                Die Heimat des Yankee Stadiums
+                und ein wichtiger Ort der Hip-Hop-Geschichte.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⛴️ Staten Island</h3>
+            <p>
+                Ein ruhigerer Stadtteil, der unter anderem
+                mit einer kostenlosen Fähre erreichbar ist.
+            </p>
+        </div>
+
+    </div>
+
+    <h2>🍕 Essen in New York</h2>
+
+    <p class="intro">
+        New York ist ein Paradies für Essen.
+        Besonders bekannt sind die riesigen New-York-Pizzastücke,
+        Bagels, Hotdogs und Cheesecakes.
+
+        Durch die vielen Kulturen gibt es ausserdem
+        Restaurants aus der ganzen Welt.
+    </p>
+
+    <h2>🎭 Kultur und Unterhaltung</h2>
+
+    <p class="intro">
+        New York ist weltweit für seine Theater und Musicals
+        am Broadway bekannt.
+
+        Ausserdem gibt es zahlreiche Museen,
+        Kunstgalerien und berühmte Konzerthallen.
+    </p>
+
+    <h2>🌦️ Das Klima</h2>
+
+    <p class="intro">
+        New York hat vier ausgeprägte Jahreszeiten.
+        Die Sommer sind oft warm und feucht,
+        während die Winter kalt sein können.
+        Im Winter fällt manchmal sogar Schnee.
+    </p>
+
+    <section class="facts">
+
+        <h2>🤯 Interessante Fakten über New York</h2>
+
+        <ul>
+            <li>New York wird oft „The Big Apple“ genannt.</li>
+            <li>Die Stadt besteht aus fünf Stadtteilen.</li>
+            <li>Der Central Park wurde 1858 eröffnet.</li>
+            <li>Die Freiheitsstatue wurde 1886 eingeweiht.</li>
+            <li>Der Times Square ist besonders für seine leuchtenden Werbetafeln bekannt.</li>
+            <li>New York ist eines der wichtigsten Finanzzentren der Welt.</li>
+            <li>Die Brooklyn Bridge wurde 1883 eröffnet.</li>
+            <li>Der Broadway ist weltberühmt für seine Musicals.</li>
+            <li>Die New Yorker U-Bahn fährt rund um die Uhr.</li>
+            <li>New York war von 1785 bis 1790 die Hauptstadt der USA.</li>
+        </ul>
+
+    </section>
+
+    <h2>❤️ Warum New York besuchen?</h2>
+
+    <p class="intro">
+        New York ist eine Stadt voller Energie und Möglichkeiten.
+        Egal ob Sehenswürdigkeiten, Shopping, Sport,
+        Kultur oder Essen – hier gibt es für jeden etwas zu entdecken.
+
+        Ein Besuch in New York ist für viele Menschen
+        ein unvergessliches Erlebnis!
+    </p>
+
+    <a href="page2.html" class="back">
+        ← Zurück zu den berühmten Orten
+    </a>
+
 </div>
-</section>
 
-<section>
-<h2>📖 Geschichte</h2>
-<p>New York wurde ursprünglich von niederländischen Siedlern gegründet und hiess zunächst New Amsterdam. Im Jahr 1664 übernahmen die Engländer die Stadt und benannten sie in New York um.</p>
-<p>Später entwickelte sich New York zu einem wichtigen Handelszentrum. Millionen Einwanderer kamen über die Jahre in die Stadt, viele davon über Ellis Island.</p>
-</section>
+<footer>
 
-<section>
-<h2>⭐ Die berühmtesten Sehenswürdigkeiten</h2>
-<h3>🗽 Freiheitsstatue</h3>
-<p>Die Freiheitsstatue steht auf Liberty Island im Hafen von New York. Sie war ein Geschenk Frankreichs an die Vereinigten Staaten und wurde 1886 eingeweiht. Sie steht als Symbol für Freiheit und Hoffnung.</p>
+    <p>© 2026 Amerika entdecken | New York City 🗽</p>
 
-<h3>🌳 Central Park</h3>
-<p>Der Central Park ist eine riesige Parkanlage mitten in Manhattan. Besucher können dort spazieren, Fahrrad fahren, Sport treiben oder einfach entspannen.</p>
+</footer>
 
-<h3>🌆 Times Square</h3>
-<p>Der Times Square ist berühmt für seine riesigen leuchtenden Werbetafeln. Besonders am Silvesterabend versammeln sich dort viele Menschen.</p>
-
-<h3>🏙️ Empire State Building</h3>
-<p>Das Empire State Building ist ein weltberühmter Wolkenkratzer. Von seinen Aussichtsplattformen kann man die Stadt von oben sehen.</p>
-
-<h3>🌉 Brooklyn Bridge</h3>
-<p>Die Brooklyn Bridge verbindet Manhattan und Brooklyn. Sie wurde 1883 eröffnet und gehört zu den bekanntesten Brücken der Stadt.</p>
-</section>
-
-<section>
-<h2>🍕 Essen in New York</h2>
-<p>New York ist bekannt für seine grosse Auswahl an internationalem Essen. Besonders beliebt sind New York Pizza, Bagels, Cheesecake und Hotdogs.</p>
-<p>Durch die vielen verschiedenen Kulturen findet man Restaurants aus aller Welt.</p>
-</section>
-
-<section>
-<h2>🤯 Wusstest du schon?</h2>
-<ul>
-<li>New York City besteht aus fünf Stadtteilen: Manhattan, Brooklyn, Queens, Bronx und Staten Island.</li>
-<li>Die Freiheitsstatue war ein Geschenk Frankreichs.</li>
-<li>Der Central Park ist grösser als manche kleine Städte.</li>
-<li>New York gehört zu den wichtigsten Finanz- und Kulturzentren der Welt.</li>
-<li>In New York werden sehr viele verschiedene Sprachen gesprochen.</li>
-</ul>
-</section>
-
-<a class="back" href="page2.html">← Zurück zu Discover America</a>
-</main>
-
-<footer>© 2026 Discover America – New York City</footer>
 <script src="america-ai.js" defer></script>
+
 </body>
 </html>
