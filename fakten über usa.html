@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>USA Fakten Generator 🇺🇸</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #101f40, #263f69);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    background: #bd2026;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 850px;
+    margin: 55px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 32px;
+}
+
+.subtitle {
+    color: #dce7ff;
+    line-height: 1.6;
+}
+
+.fact-box {
+    background: white;
+    color: #222;
+    padding: 40px 25px;
+    border-radius: 20px;
+    margin-top: 35px;
+    box-shadow: 0 10px 30px #0005;
+    transition: transform .3s;
+}
+
+.fact-box:hover {
+    transform: translateY(-5px);
+}
+
+.fact-icon {
+    font-size: 65px;
+}
+
+#fact {
+    font-size: 23px;
+    line-height: 1.6;
+    min-height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#category {
+    color: #bd2026;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.new-fact {
+    background: #bd2026;
+    color: white;
+}
+
+.random-fact {
+    background: #142d50;
+    color: white;
+}
+
+.counter {
+    margin-top: 25px;
+    color: #dce7ff;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    background: #101f40;
+}
+
+@media(max-width:600px) {
+    .container h2 {
+        font-size: 25px;
+    }
+
+    #fact {
+        font-size: 19px;
+    }
+
+    .fact-box {
+        padding: 25px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇺🇸 DISCOVER AMERICA</h1>
+
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="page2.html">Entdecken</a>
+        <a href="fakten.html">USA Fakten</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2>🇺🇸 USA Fakten Generator</h2>
+
+    <p class="subtitle">
+        Wie gut kennst du Amerika?
+        Entdecke spannende und überraschende Fakten
+        über die Vereinigten Staaten!
+    </p>
+
+    <div class="fact-box">
+
+        <div class="fact-icon" id="icon">
+            🌎
+        </div>
+
+        <h3>Wusstest du schon?</h3>
+
+        <p id="fact">
+            Klicke auf den Button und entdecke deinen ersten USA-Fakt!
+        </p>
+
+        <div id="category">
+            AMERICA FACTS
+        </div>
+
+    </div>
+
+    <div style="margin-top:25px">
+
+        <button class="new-fact" onclick="neuerFakt()">
+            🎲 Neuen Fakt anzeigen
+        </button>
+
+        <button class="random-fact" onclick="zufallsFakt()">
+            ⭐ Überrasch mich!
+        </button>
+
+    </div>
+
+    <div class="counter">
+        Fakten in der Datenbank:
+        <strong id="anzahl">0</strong>
+    </div>
+
+    <p style="color:#dce7ff;margin-top:20px">
+        🇺🇸 Entdecke Amerika – ein Fakt nach dem anderen!
+    </p>
+
+</div>
+
+<footer>
+    © 2026 Discover America 🇺🇸
+</footer>
+
+<script>
+
+const fakten = [
+
+{
+icon:"🗽",
+category:"NEW YORK",
+text:"Die Freiheitsstatue war ein Geschenk Frankreichs an die Vereinigten Staaten."
+},
+
+{
+icon:"⭐",
+category:"ALLGEMEIN",
+text:"Die amerikanische Flagge besitzt 50 Sterne. Jeder Stern steht für einen Bundesstaat."
+},
+
+{
+icon:"🏛️",
+category:"POLITIK",
+text:"Washington, D.C. ist die Hauptstadt der Vereinigten Staaten."
+},
+
+{
+icon:"🌵",
+category:"NATUR",
+text:"Alaska ist flächenmässig der grösste Bundesstaat der USA."
+},
+
+{
+icon:"🌺",
+category:"INSELN",
+text:"Hawaii ist der einzige US-Bundesstaat, der vollständig aus Inseln besteht."
+},
+
+{
+icon:"🏜️",
+category:"NATUR",
+text:"Der Grand Canyon wurde über Millionen von Jahren durch Wasser und Erosion geformt."
+},
+
+{
+icon:"🎬",
+category:"HOLLYWOOD",
+text:"Hollywood ist ein Stadtteil von Los Angeles und weltberühmt für die Filmindustrie."
+},
+
+{
+icon:"🌉",
+category:"SAN FRANCISCO",
+text:"Die Golden Gate Bridge wurde 1937 eröffnet."
+},
+
+{
+icon:"🎆",
+category:"FEIERTAGE",
+text:"Der amerikanische Unabhängigkeitstag wird jedes Jahr am 4. Juli gefeiert."
+},
+
+{
+icon:"🦬",
+category:"TIERE",
+text:"Der amerikanische Bison ist das Nationaltier der Vereinigten Staaten."
+},
+
+{
+icon:"🌳",
+category:"NEW YORK",
+text:"Der Central Park befindet sich mitten in Manhattan."
+},
+
+{
+icon:"🏙️",
+category:"STÄDTE",
+text:"New York City besteht aus fünf Stadtteilen, die Boroughs genannt werden."
+},
+
+{
+icon:"🎢",
+category:"FLORIDA",
+text:"Walt Disney World befindet sich in der Nähe von Orlando in Florida."
+},
+
+{
+icon:"🎰",
+category:"NEVADA",
+text:"Las Vegas ist besonders für seine grossen Hotels und Shows bekannt."
+},
+
+{
+icon:"🏀",
+category:"SPORT",
+text:"Die NBA ist die bekannteste professionelle Basketballliga der USA."
+},
+
+{
+icon:"🏈",
+category:"SPORT",
+text:"Der Super Bowl ist das Finale der amerikanischen Football-Liga NFL."
+},
+
+{
+icon:"🗺️",
+category:"GEOGRAFIE",
+text:"Die USA grenzen an Kanada und Mexiko."
+},
+
+{
+icon:"🌊",
+category:"NATUR",
+text:"Der Mississippi gehört zu den längsten Flusssystemen Nordamerikas."
+},
+
+{
+icon:"🦅",
+category:"SYMBOL",
+text:"Der Weisskopfseeadler ist das Wappentier der Vereinigten Staaten."
+},
+
+{
+icon:"🍔",
+category:"ESSEN",
+text:"Hamburger und Hotdogs gehören zu den bekanntesten Gerichten der amerikanischen Esskultur."
+},
+
+{
+icon:"🍎",
+category:"NEW YORK",
+text:"New York City wird oft The Big Apple genannt."
+},
+
+{
+icon:"🏔️",
+category:"BERGE",
+text:"Die Rocky Mountains erstrecken sich über einen grossen Teil des westlichen Nordamerikas."
+},
+
+{
+icon:"🌋",
+category:"NATIONALPARKS",
+text:"Yellowstone wurde 1872 gegründet und gilt als erster Nationalpark der Welt."
+},
+
+{
+icon:"🌲",
+category:"NATUR",
+text:"Der Yosemite-Nationalpark ist für seine riesigen Granitfelsen und Wasserfälle bekannt."
+},
+
+{
+icon:"🚀",
+category:"WELTRAUM",
+text:"Die NASA ist die amerikanische Raumfahrtbehörde."
+},
+
+{
+icon:"🌕",
+category:"WELTRAUM",
+text:"1969 landeten mit Apollo 11 erstmals Menschen auf dem Mond."
+},
+
+{
+icon:"🎸",
+category:"MUSIK",
+text:"Jazz, Blues und viele andere Musikrichtungen haben wichtige Wurzeln in den USA."
+},
+
+{
+icon:"🦞",
+category:"MAINE",
+text:"Der Bundesstaat Maine ist besonders für seine Hummer bekannt."
+},
+
+{
+icon:"🤠",
+category:"TEXAS",
+text:"Texas ist flächenmässig der zweitgrösste Bundesstaat der USA."
+},
+
+{
+icon:"🏙️",
+category:"CHICAGO",
+text:"Chicago liegt am Lake Michigan und ist für seine Architektur bekannt."
+},
+
+{
+icon:"🌴",
+category:"MIAMI",
+text:"Miami liegt in Florida und befindet sich an der Atlantikküste."
+},
+
+{
+icon:"🧀",
+category:"WISCONSIN",
+text:"Wisconsin ist besonders für seine Käseproduktion bekannt."
+},
+
+{
+icon:"🍁",
+category:"VERMONT",
+text:"Vermont ist bekannt für seine Ahornsirup-Produktion."
+},
+
+{
+icon:"🏛️",
+category:"GESCHICHTE",
+text:"Die Unabhängigkeitserklärung der USA wurde am 4. Juli 1776 verabschiedet."
+},
+
+{
+icon:"📜",
+category:"GESCHICHTE",
+text:"Die Verfassung der Vereinigten Staaten wurde 1787 unterzeichnet."
+},
+
+{
+icon:"🎃",
+category:"FEIERTAGE",
+text:"Halloween wird in den USA am 31. Oktober gefeiert."
+},
+
+{
+icon:"🦃",
+category:"FEIERTAGE",
+text:"Thanksgiving wird in den USA am vierten Donnerstag im November gefeiert."
+},
+
+{
+icon:"🏖️",
+category:"KALIFORNIEN",
+text:"Kalifornien liegt an der Westküste der Vereinigten Staaten."
+},
+
+{
+icon:"🏙️",
+category:"BOSTON",
+text:"Boston ist eine der ältesten Grossstädte der USA."
+},
+
+{
+icon:"🎵",
+category:"NEW ORLEANS",
+text:"New Orleans in Louisiana ist eng mit der Geschichte des Jazz verbunden."
+},
+
+{
+icon:"🌽",
+category:"IOWA",
+text:"Iowa gehört zu den wichtigen landwirtschaftlichen Bundesstaaten der USA."
+},
+
+{
+icon:"🗻",
+category:"NATUR",
+text:"Denali in Alaska ist mit rund 6.190 Metern der höchste Berg Nordamerikas."
+},
+
+{
+icon:"🌉",
+category:"SAN FRANCISCO",
+text:"Die Golden Gate Bridge ist ungefähr 2,7 Kilometer lang."
+},
+
+{
+icon:"🏙️",
+category:"NEW YORK",
+text:"Das Empire State Building wurde 1931 eröffnet."
+},
+
+{
+icon:"🎥",
+category:"FILM",
+text:"Die Oscar-Verleihung ist eine der bekanntesten Veranstaltungen der Filmbranche."
+},
+
+{
+icon:"🚕",
+category:"NEW YORK",
+text:"Die gelben Taxis gehören zu den bekanntesten Bildern von New York City."
+},
+
+{
+icon:"🌊",
+category:"NATUR",
+text:"Die Niagarafälle liegen an der Grenze zwischen den USA und Kanada."
+},
+
+{
+icon:"🏜️",
+category:"ARIZONA",
+text:"Der Grand Canyon liegt hauptsächlich im Bundesstaat Arizona."
+},
+
+{
+icon:"🏰",
+category:"FLORIDA",
+text:"Florida ist für seine zahlreichen Freizeitparks bekannt."
+},
+
+{
+icon:"🛣️",
+category:"ROUTE 66",
+text:"Die historische Route 66 wurde 1926 eingerichtet und verband Chicago mit Santa Monica."
+},
+
+{
+icon:"🌆",
+category:"SEATTLE",
+text:"Der Space Needle ist eines der bekanntesten Wahrzeichen von Seattle."
+},
+
+{
+icon:"🌎",
+category:"GEOGRAFIE",
+text:"Die USA bestehen aus 50 Bundesstaaten und dem Bundesdistrikt Washington, D.C."
+},
+
+{
+icon:"🏞️",
+category:"NATIONALPARKS",
+text:"Der Zion-Nationalpark befindet sich im Bundesstaat Utah."
+},
+
+{
+icon:"🗽",
+category:"NEW YORK",
+text:"Die Freiheitsstatue wurde 1886 eingeweiht."
+}
+
+];
+
+let letzterFakt = -1;
+
+document.getElementById("anzahl").textContent = fakten.length;
+
+function neuerFakt() {
+
+    if (fakten.length === 0) return;
+
+    let nummer;
+
+    do {
+        nummer = Math.floor(Math.random() * fakten.length);
+    } while (fakten.length > 1 && nummer === letzterFakt);
+
+    letzterFakt = nummer;
+
+    const fakt = fakten[nummer];
+
+    const box = document.querySelector(".fact-box");
+
+    box.style.opacity = "0";
+    box.style.transform = "translateY(10px)";
+
+    setTimeout(() => {
+
+        document.getElementById("icon").textContent = fakt.icon;
+        document.getElementById("fact").textContent = fakt.text;
+        document.getElementById("category").textContent = fakt.category;
+
+        box.style.opacity = "1";
+        box.style.transform = "translateY(0)";
+
+    }, 200);
+
+}
+
+function zufallsFakt() {
+    neuerFakt();
+}
+
+</script>
+
+<script src="america-ai.js" defer></script>
+
+</body>
+</html>
