@@ -1,98 +1,360 @@
 
+
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New York City – Discover America</title>
+
+<title>Los Angeles – Amerika entdecken</title>
+
+<link rel="stylesheet" href="style.css">
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f2f4f8;color:#222}
-header{background:#142d50;color:white;padding:25px;text-align:center}
-nav a{color:white;margin:10px;text-decoration:none}
-.hero{height:350px;background:linear-gradient(#0005,#0006),url('https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1400') center/cover;display:flex;align-items:center;justify-content:center;color:white;text-align:center}
-.hero h2{font-size:48px;text-shadow:2px 2px 5px black}
-main{max-width:1000px;margin:30px auto;padding:20px}
-section{background:white;padding:25px;margin:20px 0;border-radius:12px;box-shadow:0 3px 12px #0001}
-h2{color:#bd2026}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
-.fact{background:#edf2f8;padding:18px;border-radius:10px}
-.back{display:inline-block;background:#bd2026;color:white;padding:13px 20px;text-decoration:none;border-radius:8px}
-footer{text-align:center;background:#142d50;color:white;padding:20px}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8ef;
+    color: #252525;
+}
+
+header {
+    background: #bd2026;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 420px;
+    background:
+    linear-gradient(#0006, #0007),
+    url("https://images.unsplash.com/photo-1534190760961-74e8c1c5c3da?w=1600")
+    center/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.content h2 {
+    color: #bd2026;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.intro {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.places {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #0002;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #bd2026;
+    padding: 0 15px;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    line-height: 1.6;
+}
+
+.facts {
+    background: #142d50;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    line-height: 2;
+}
+
+.facts h2 {
+    color: white;
+}
+
+.back {
+    display: block;
+    width: fit-content;
+    margin: 35px auto;
+    padding: 15px 25px;
+    background: #bd2026;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background: #8e171c;
+}
+
+footer {
+    background: #142d50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+@media(max-width:600px) {
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+}
+
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>🇺🇸 DISCOVER AMERICA</h1>
-<nav><a href="index.html">Startseite</a><a href="page2.html">Entdecken</a></nav>
+
+    <h1>🇺🇸 DISCOVER AMERICA</h1>
+
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="page2.html">Entdecken</a>
+        <a href="fakten.html">USA Fakten</a>
+    </nav>
+
 </header>
 
-<div class="hero"><h2>🗽 New York City</h2></div>
+<section class="hero">
 
-<main>
-<section>
-<h2>Willkommen in New York!</h2>
-<p>New York City ist eine der bekanntesten Städte der Welt. Sie liegt im Bundesstaat New York an der Ostküste der Vereinigten Staaten. Viele Menschen nennen sie auch „The Big Apple“ oder „Die Stadt, die niemals schläft“.</p>
-<p>Die Stadt ist berühmt für ihre riesigen Wolkenkratzer, ihre vielen Kulturen, ihre berühmten Sehenswürdigkeiten und ihr aufregendes Stadtleben.</p>
+    <div>
+        <h2>🌴 LOS ANGELES</h2>
+
+        <p>
+            Die Stadt der Engel – Hollywood, Sonne und Traumstrände!
+        </p>
+    </div>
+
 </section>
 
-<section>
-<h2>📊 New York in Zahlen</h2>
-<div class="facts">
-<div class="fact"><b>Bundesstaat</b><br>New York</div>
-<div class="fact"><b>Land</b><br>USA</div>
-<div class="fact"><b>Sprache</b><br>Vor allem Englisch</div>
-<div class="fact"><b>Spitzname</b><br>The Big Apple</div>
-<div class="fact"><b>Stadtteile</b><br>5 Boroughs</div>
-<div class="fact"><b>Zeitzone</b><br>Eastern Time</div>
+<div class="content">
+
+    <h2>🌴 Willkommen in Los Angeles</h2>
+
+    <p class="intro">
+        Los Angeles liegt im Bundesstaat Kalifornien an der
+        Westküste der USA. Die Stadt ist besonders für Hollywood,
+        ihre Filmindustrie, berühmte Strände und das sonnige
+        Wetter bekannt.
+
+        Mit Millionen Einwohnern gehört Los Angeles zu den
+        grössten Städten der Vereinigten Staaten.
+    </p>
+
+    <h2>⭐ Die berühmtesten Sehenswürdigkeiten</h2>
+
+    <div class="places">
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800"
+            alt="Hollywood">
+
+            <h3>🎬 Hollywood</h3>
+
+            <p>
+                Hollywood ist weltweit für seine Filmindustrie
+                bekannt. Hier entstehen zahlreiche bekannte Filme
+                und Serien.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1515894347714-1a5b0b8b8c1c?w=800"
+            alt="Hollywood Schriftzug">
+
+            <h3>🔠 Hollywood-Schriftzug</h3>
+
+            <p>
+                Der berühmte Schriftzug steht in den Hollywood Hills
+                und ist eines der bekanntesten Wahrzeichen der Stadt.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800"
+            alt="Strand">
+
+            <h3>🏖️ Santa Monica Beach</h3>
+
+            <p>
+                Santa Monica ist für seinen Strand, den Pier
+                und den Vergnügungspark am Meer bekannt.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800"
+            alt="Beverly Hills">
+
+            <h3>💎 Beverly Hills</h3>
+
+            <p>
+                Beverly Hills ist bekannt für luxuriöse Häuser,
+                berühmte Einwohner und die Einkaufsstrasse Rodeo Drive.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=800"
+            alt="Los Angeles Strand">
+
+            <h3>🌊 Venice Beach</h3>
+
+            <p>
+                Venice Beach ist berühmt für seine Strandpromenade,
+                Strassenkünstler und die besondere Atmosphäre.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=800"
+            alt="Los Angeles bei Nacht">
+
+            <h3>🌃 Downtown LA</h3>
+
+            <p>
+                Das Stadtzentrum besitzt viele Wolkenkratzer,
+                Restaurants, Museen und beeindruckende Gebäude.
+            </p>
+
+        </div>
+
+    </div>
+
+    <h2>🎥 Hollywood und die Filmindustrie</h2>
+
+    <p class="intro">
+        Los Angeles ist eines der wichtigsten Zentren der
+        internationalen Filmindustrie. Viele berühmte Schauspieler,
+        Regisseure und Produzenten arbeiten hier.
+
+        Die Universal Studios Hollywood verbinden einen
+        Freizeitpark mit einem echten Filmstudio.
+    </p>
+
+    <h2>🍔 Essen in Los Angeles</h2>
+
+    <p class="intro">
+        In Los Angeles gibt es Essen aus der ganzen Welt.
+        Besonders beliebt sind Hamburger, Tacos, Burritos,
+        Pizza und mexikanische Gerichte.
+    </p>
+
+    <h2>🌞 Das Klima</h2>
+
+    <p class="intro">
+        Los Angeles hat ein mediterranes Klima.
+        Die Sommer sind meistens warm und trocken,
+        während die Winter eher mild sind.
+    </p>
+
+    <section class="facts">
+
+        <h2>🤯 Interessante Fakten über Los Angeles</h2>
+
+        <ul>
+            <li>Los Angeles bedeutet auf Spanisch „Die Engel“.</li>
+            <li>Die Stadt wurde 1781 gegründet.</li>
+            <li>Los Angeles liegt im Bundesstaat Kalifornien.</li>
+            <li>Hollywood gehört zu Los Angeles.</li>
+            <li>Die Stadt ist ein wichtiges Zentrum der Filmindustrie.</li>
+            <li>Los Angeles war zweimal Gastgeber der Olympischen Sommerspiele: 1932 und 1984. 2028 wird die Stadt erneut Gastgeber sein.</li>
+            <li>Die Stadt wird häufig mit dem Kürzel LA bezeichnet.</li>
+        </ul>
+
+    </section>
+
+    <a href="page2.html" class="back">
+        ← Zurück zu den berühmten Orten
+    </a>
+
 </div>
-</section>
 
-<section>
-<h2>📖 Geschichte</h2>
-<p>New York wurde ursprünglich von niederländischen Siedlern gegründet und hiess zunächst New Amsterdam. Im Jahr 1664 übernahmen die Engländer die Stadt und benannten sie in New York um.</p>
-<p>Später entwickelte sich New York zu einem wichtigen Handelszentrum. Millionen Einwanderer kamen über die Jahre in die Stadt, viele davon über Ellis Island.</p>
-</section>
+<footer>
 
-<section>
-<h2>⭐ Die berühmtesten Sehenswürdigkeiten</h2>
-<h3>🗽 Freiheitsstatue</h3>
-<p>Die Freiheitsstatue steht auf Liberty Island im Hafen von New York. Sie war ein Geschenk Frankreichs an die Vereinigten Staaten und wurde 1886 eingeweiht. Sie steht als Symbol für Freiheit und Hoffnung.</p>
+    <p>© 2026 Amerika entdecken | Los Angeles 🌴</p>
 
-<h3>🌳 Central Park</h3>
-<p>Der Central Park ist eine riesige Parkanlage mitten in Manhattan. Besucher können dort spazieren, Fahrrad fahren, Sport treiben oder einfach entspannen.</p>
+</footer>
 
-<h3>🌆 Times Square</h3>
-<p>Der Times Square ist berühmt für seine riesigen leuchtenden Werbetafeln. Besonders am Silvesterabend versammeln sich dort viele Menschen.</p>
-
-<h3>🏙️ Empire State Building</h3>
-<p>Das Empire State Building ist ein weltberühmter Wolkenkratzer. Von seinen Aussichtsplattformen kann man die Stadt von oben sehen.</p>
-
-<h3>🌉 Brooklyn Bridge</h3>
-<p>Die Brooklyn Bridge verbindet Manhattan und Brooklyn. Sie wurde 1883 eröffnet und gehört zu den bekanntesten Brücken der Stadt.</p>
-</section>
-
-<section>
-<h2>🍕 Essen in New York</h2>
-<p>New York ist bekannt für seine grosse Auswahl an internationalem Essen. Besonders beliebt sind New York Pizza, Bagels, Cheesecake und Hotdogs.</p>
-<p>Durch die vielen verschiedenen Kulturen findet man Restaurants aus aller Welt.</p>
-</section>
-
-<section>
-<h2>🤯 Wusstest du schon?</h2>
-<ul>
-<li>New York City besteht aus fünf Stadtteilen: Manhattan, Brooklyn, Queens, Bronx und Staten Island.</li>
-<li>Die Freiheitsstatue war ein Geschenk Frankreichs.</li>
-<li>Der Central Park ist grösser als manche kleine Städte.</li>
-<li>New York gehört zu den wichtigsten Finanz- und Kulturzentren der Welt.</li>
-<li>In New York werden sehr viele verschiedene Sprachen gesprochen.</li>
-</ul>
-</section>
-
-<a class="back" href="page2.html">← Zurück zu Discover America</a>
-</main>
-
-<footer>© 2026 Discover America – New York City</footer>
 <script src="america-ai.js" defer></script>
+
 </body>
 </html>
